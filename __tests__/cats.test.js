@@ -18,16 +18,16 @@ describe('backend routes', () => {
     expect(body).toEqual(seedData);
   });
 
-  it('can get an cat', async () => {
+  it('can get a cat', async () => {
     const { body } = await request(app).get('/cats/1');
 
     expect(body).toEqual(seedData[0]);
   });
 
-  it('can post an cat', async () => {
+  it('can post a cat', async () => {
     const data = {
       name: 'albert',
-      is_good_boy: true
+      weight: 1.5
     };
 
     const { body } = await request(app).post('/cats')
@@ -39,10 +39,10 @@ describe('backend routes', () => {
     expect(body).toEqual(data);
   });
 
-  it('can put an cat', async () => {
+  it('can put a cat', async () => {
     const data = {
       name: 'albert',
-      is_good_boy: true
+      weight: 1.7
     };
 
     const { body } = await request(app).put('/cats/1')
@@ -55,7 +55,7 @@ describe('backend routes', () => {
 
   });
 
-  it('can delete an cat', async () => {
+  it('can delete a cat', async () => {
     await request(app).delete('/cats/1');
 
     const { body } = await request(app).get('/cats');
