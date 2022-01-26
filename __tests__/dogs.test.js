@@ -50,7 +50,7 @@ describe('backend routes', () => {
       .set('Content-Type', 'application/json')
       .set('Accept', 'application/json');
 
-    data.id = 1;
+    data.id = '1';
     expect(body).toEqual(data);
 
   });
