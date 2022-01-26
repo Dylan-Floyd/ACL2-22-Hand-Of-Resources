@@ -21,7 +21,7 @@ CREATE TABLE cats (
 
 CREATE TABLE planes (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  name TEXT NOT NULL,
+  model TEXT NOT NULL,
   cost MONEY NOT NULL
 );
 
@@ -43,8 +43,8 @@ VALUES ('spot', true), ('jeep', true), ('jeff', true);
 INSERT INTO cats (name, weight)
 VALUES ('kevin', 1.2), ('chungus', 42), ('pico', 0.001);
 
-INSERT INTO planes (name, cost)
-VALUES ('mustang', 3.50), ('777', 123456.12), ('787', 7654321.01);
+INSERT INTO planes (model, cost)
+VALUES ('mustang', '$3.50'), ('777', '$123,456.12'), ('787', '$7,654,321.01');
 
 INSERT INTO trains (model, manufacturer)
 VALUES ('train1', 'train co'), ('train2', 'train co'), ('train3', 'train co');

@@ -26,8 +26,8 @@ describe('backend routes', () => {
 
   it('can post a plane', async () => {
     const data = {
-      name: 'albert',
-      weight: 1.5
+      model: 'albert',
+      cost: '$1.50'
     };
 
     const { body } = await request(app).post('/planes')
@@ -41,8 +41,8 @@ describe('backend routes', () => {
 
   it('can put a plane', async () => {
     const data = {
-      name: 'albert',
-      weight: 1.7
+      model: 'albert',
+      cost: '$1.70'
     };
 
     const { body } = await request(app).put('/planes/1')
@@ -70,16 +70,16 @@ const seedData = [
   {
     id: '1',
     model: 'mustang',
-    cost: 3.50
+    cost: '$3.50'
   },
   {
     id: '2',
     model: '777',
-    cost: 123456.12
+    cost: '$123,456.12'
   },
   {
     id: '3',
     model: '787',
-    cost: 7654321.01
+    cost: '$7,654,321.01'
   }
 ];
