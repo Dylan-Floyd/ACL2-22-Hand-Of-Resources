@@ -27,7 +27,7 @@ describe('backend routes', () => {
   it('can post a train', async () => {
     const data = {
       model: 'albert',
-      cost: '$1.50'
+      manufacturer: 'better trains co'
     };
 
     const { body } = await request(app).post('/trains')
@@ -42,7 +42,7 @@ describe('backend routes', () => {
   it('can put a train', async () => {
     const data = {
       model: 'albert',
-      cost: '$1.70'
+      manufacturer: 'better trains co'
     };
 
     const { body } = await request(app).put('/trains/1')
@@ -74,12 +74,12 @@ const seedData = [
   },
   {
     id: '2',
-    model: '777',
+    model: 'train2',
     manufacturer: 'train co'
   },
   {
     id: '3',
-    model: '787',
+    model: 'train3',
     manufacturer: 'train co'
   }
 ];
