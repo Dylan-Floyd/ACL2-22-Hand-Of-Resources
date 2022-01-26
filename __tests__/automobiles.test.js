@@ -75,7 +75,7 @@ const seedData = [
   {
     id: '2',
     model: 'bug',
-    hp: 163.2
+    hp: 63.2
   },
   {
     id: '3',
