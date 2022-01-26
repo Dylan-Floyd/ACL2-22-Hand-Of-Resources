@@ -35,7 +35,7 @@ describe('backend routes', () => {
       .set('Content-Type', 'application/json')
       .set('Accept', 'application/json');
 
-    data.id = 6;
+    data.id = '4';
     expect(body).toEqual(data);
   });
 
@@ -68,17 +68,17 @@ describe('backend routes', () => {
 
 const seedData = [
   {
-    id: 1,
+    id: '1',
     name: 'spot',
     is_good_boy: true
   },
   {
-    id: 2,
+    id: '2',
     name: 'jeep',
     is_good_boy: true
   },
   {
-    id: 3,
+    id: '3',
     name: 'jeff',
     is_good_boy: true
   }
